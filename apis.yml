@@ -1,0 +1,84 @@
+aid: mendix
+name: Mendix
+description: >-
+  Mendix, a Siemens company, is an enterprise low-code application development
+  platform for designing, building, deploying, and operating multi-experience
+  applications across web, mobile, and conversational interfaces. The platform
+  spans Studio Pro modeling, the Mendix Cloud and private cloud runtimes, and
+  governance and operational tooling for the full application lifecycle.
+  Mendix exposes a suite of platform APIs (Deploy, Build, App Repository,
+  User Management, Content, Studio Pro, and Apps APIs) secured by API keys
+  or personal access tokens (PATs).
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Low-Code
+  - Application Development
+  - Enterprise Platform
+  - Application Lifecycle
+  - Deployment
+  - Governance
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/mendix/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: mendix:deploy-api
+    name: Mendix Deploy API
+    description: >-
+      REST API for managing apps, environments, deployment packages, transports,
+      backups, and deployment lifecycle on Mendix Cloud. Authentication is via
+      Mendix-Username and Mendix-ApiKey request headers tied to the requesting
+      user's API key and platform permissions.
+    humanURL: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/
+    baseURL: https://deploy.mendix.com/api/1
+    tags:
+      - Low-Code
+      - Deployment
+      - Application Lifecycle
+    properties:
+      - type: Documentation
+        url: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/
+      - type: Deploy API v2
+        url: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api-2/
+  - aid: mendix:build-api
+    name: Mendix Build API
+    description: >-
+      REST API for managing app projects, branches, revisions, and build
+      packages in Mendix Team Server. Uses Mendix API key authentication.
+    humanURL: https://docs.mendix.com/apidocs-mxsdk/apidocs/build-api/
+    baseURL: https://deploy.mendix.com/api/1
+    tags:
+      - Low-Code
+      - Build
+      - Source Control
+    properties:
+      - type: Documentation
+        url: https://docs.mendix.com/apidocs-mxsdk/apidocs/build-api/
+  - aid: mendix:app-repository-api
+    name: Mendix App Repository API
+    description: >-
+      REST API for managing apps, members, and repository metadata in the
+      Mendix platform. Uses PAT or Mendix API key authentication.
+    humanURL: https://docs.mendix.com/apidocs-mxsdk/apidocs/app-repository-api/
+    baseURL: https://repository.api.mendix.com
+    tags:
+      - Low-Code
+      - App Management
+      - Governance
+    properties:
+      - type: Documentation
+        url: https://docs.mendix.com/apidocs-mxsdk/apidocs/app-repository-api/
+common:
+  - type: Website
+    url: https://www.mendix.com
+  - type: Documentation
+    url: https://docs.mendix.com/apidocs-mxsdk/apidocs/
+  - type: Pricing
+    url: https://www.mendix.com/pricing/
+  - type: Sign Up
+    url: https://signup.mendix.com/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
