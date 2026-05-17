@@ -77,7 +77,7 @@ common:
     url: https://docs.mendix.com/apidocs-mxsdk/apidocs/
   - type: Pricing
     url: https://www.mendix.com/pricing/
-  - type: Sign Up
+  - type: SignUp
     url: https://signup.mendix.com/
 maintainers:
   - FN: Kin Lane
