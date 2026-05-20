@@ -71,6 +71,10 @@ apis:
       - type: Documentation
         url: https://docs.mendix.com/apidocs-mxsdk/apidocs/app-repository-api/
 common:
+  - type: GitHubOrganization
+    url: https://github.com/mendix
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/mendix
   - type: Website
     url: https://www.mendix.com
   - type: Documentation
