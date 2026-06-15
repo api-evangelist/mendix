@@ -1,0 +1,2075 @@
+{
+  "item": [
+    {
+      "id": "6213cc44-f2c8-4ce9-a364-bbd7a2c251b2",
+      "name": "Apps",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a1f32df0-4c47-499e-903d-07bc3f96db19",
+          "name": "List apps",
+          "request": {
+            "name": "List apps",
+            "description": {
+              "content": "Retrieve all apps accessible to the authenticated user on Mendix Cloud.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "apps"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0e1acaba-4031-4936-87c0-024123c2bed1",
+              "name": "Apps list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "18d65d8f-8a25-408c-a2bf-845f5a724e69",
+          "name": "Create a Free App",
+          "request": {
+            "name": "Create a Free App",
+            "description": {
+              "content": "Create a new Free App environment.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "apps"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9caa6d20-f6d0-44a9-afe1-55d18b7cd5b7",
+              "name": "App created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3f1964a5-c275-4b03-815c-63fcea03c3ef",
+          "name": "Get app details",
+          "request": {
+            "name": "Get app details",
+            "description": {},
+            "url": {
+              "path": [
+                "apps",
+                ":AppId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AppId",
+                  "description": "(Required) Sub-domain name of the app."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5b6bf7f6-6ca2-40d9-baf8-eebb5dd7d2f1",
+              "name": "App details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":AppId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AppId",
+                      "description": "(Required) Sub-domain name of the app."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "b6177d48-8b80-4b74-bde5-bf7b647aa77d",
+      "name": "Environments",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "acd488ca-2d3f-4759-b244-31fd0430b97a",
+          "name": "List environments",
+          "request": {
+            "name": "List environments",
+            "description": {},
+            "url": {
+              "path": [
+                "apps",
+                ":AppId",
+                "environments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AppId",
+                  "description": "(Required) Sub-domain name of the app."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "123d7150-3173-404f-91eb-8b7a200aa2dc",
+              "name": "Environments",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":AppId",
+                    "environments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AppId",
+                      "description": "(Required) Sub-domain name of the app."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "38b863ae-5fc0-4339-9265-f978c5118616",
+          "name": "Get environment",
+          "request": {
+            "name": "Get environment",
+            "description": {},
+            "url": {
+              "path": [
+                "apps",
+                ":AppId",
+                "environments",
+                ":Mode"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AppId",
+                  "description": "(Required) Sub-domain name of the app."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Mode",
+                  "description": "(Required) Environment mode."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0801c594-d218-4fd0-b3c6-fe3e4ba1eced",
+              "name": "Environment",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":AppId",
+                    "environments",
+                    ":Mode"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AppId",
+                      "description": "(Required) Sub-domain name of the app."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "Mode",
+                      "description": "(Required) Environment mode."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "250c2b2f-1d06-4189-b7ad-6feeacb90358",
+          "name": "Start environment",
+          "request": {
+            "name": "Start environment",
+            "description": {},
+            "url": {
+              "path": [
+                "apps",
+                ":AppId",
+                "environments",
+                ":Mode",
+                "start"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AppId",
+                  "description": "(Required) Sub-domain name of the app."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Mode",
+                  "description": "(Required) Environment mode."
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d281ec3b-fe3d-44e2-9c15-804b08da6c88",
+              "name": "Start job accepted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":AppId",
+                    "environments",
+                    ":Mode",
+                    "start"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AppId",
+                      "description": "(Required) Sub-domain name of the app."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "Mode",
+                      "description": "(Required) Environment mode."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "44b66718-bf15-47ce-9db4-6d61942595aa",
+          "name": "Check environment start status",
+          "request": {
+            "name": "Check environment start status",
+            "description": {},
+            "url": {
+              "path": [
+                "apps",
+                ":AppId",
+                "environments",
+                ":Mode",
+                "start",
+                ":JobId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AppId",
+                  "description": "(Required) Sub-domain name of the app."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Mode",
+                  "description": "(Required) Environment mode."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "JobId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "23a41007-91c5-4e86-be4e-7eba040edebf",
+              "name": "Job status",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":AppId",
+                    "environments",
+                    ":Mode",
+                    "start",
+                    ":JobId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AppId",
+                      "description": "(Required) Sub-domain name of the app."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "Mode",
+                      "description": "(Required) Environment mode."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "JobId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "87da818c-62cf-44f4-8f98-1ddbc7ee2f3f",
+          "name": "Stop environment",
+          "request": {
+            "name": "Stop environment",
+            "description": {},
+            "url": {
+              "path": [
+                "apps",
+                ":AppId",
+                "environments",
+                ":Mode",
+                "stop"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AppId",
+                  "description": "(Required) Sub-domain name of the app."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Mode",
+                  "description": "(Required) Environment mode."
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e8e8c719-1b82-4a05-90d6-5abc452cf53b",
+              "name": "Stopped",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":AppId",
+                    "environments",
+                    ":Mode",
+                    "stop"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AppId",
+                      "description": "(Required) Sub-domain name of the app."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "Mode",
+                      "description": "(Required) Environment mode."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "feaef518-589f-4882-87ba-a6c8ff6bd591",
+          "name": "Clean environment data",
+          "request": {
+            "name": "Clean environment data",
+            "description": {},
+            "url": {
+              "path": [
+                "apps",
+                ":AppId",
+                "environments",
+                ":Mode",
+                "clean"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AppId",
+                  "description": "(Required) Sub-domain name of the app."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Mode",
+                  "description": "(Required) Environment mode."
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "60245eb8-f75b-4575-a752-7ce686af67cd",
+              "name": "Clean accepted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":AppId",
+                    "environments",
+                    ":Mode",
+                    "clean"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AppId",
+                      "description": "(Required) Sub-domain name of the app."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "Mode",
+                      "description": "(Required) Environment mode."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "04e2e78c-74b5-4b9f-9932-75b31bc5af18",
+          "name": "Get environment settings",
+          "request": {
+            "name": "Get environment settings",
+            "description": {},
+            "url": {
+              "path": [
+                "apps",
+                ":AppId",
+                "environments",
+                ":Mode",
+                "settings"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AppId",
+                  "description": "(Required) Sub-domain name of the app."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Mode",
+                  "description": "(Required) Environment mode."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "541899dd-b060-436a-acdb-8cbbc8d6b12d",
+              "name": "Settings",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":AppId",
+                    "environments",
+                    ":Mode",
+                    "settings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AppId",
+                      "description": "(Required) Sub-domain name of the app."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "Mode",
+                      "description": "(Required) Environment mode."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "994cc739-cded-473b-8c64-087d3a5cdc66",
+          "name": "Update environment settings",
+          "request": {
+            "name": "Update environment settings",
+            "description": {},
+            "url": {
+              "path": [
+                "apps",
+                ":AppId",
+                "environments",
+                ":Mode",
+                "settings"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AppId",
+                  "description": "(Required) Sub-domain name of the app."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Mode",
+                  "description": "(Required) Environment mode."
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2851f8de-4ef7-4464-b9be-23f4587e2034",
+              "name": "Updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":AppId",
+                    "environments",
+                    ":Mode",
+                    "settings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AppId",
+                      "description": "(Required) Sub-domain name of the app."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "Mode",
+                      "description": "(Required) Environment mode."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d6c53a69-b717-4e34-89c6-540bf58fe644",
+          "name": "Scale memory and instances",
+          "request": {
+            "name": "Scale memory and instances",
+            "description": {},
+            "url": {
+              "path": [
+                "apps",
+                ":AppId",
+                "environments",
+                ":Mode",
+                "scale"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AppId",
+                  "description": "(Required) Sub-domain name of the app."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Mode",
+                  "description": "(Required) Environment mode."
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8403febb-f038-4903-947c-02e1111e14ec",
+              "name": "Scaled",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":AppId",
+                    "environments",
+                    ":Mode",
+                    "scale"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AppId",
+                      "description": "(Required) Sub-domain name of the app."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "Mode",
+                      "description": "(Required) Environment mode."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "6409e5e7-fc02-4921-80c3-429dc1467392",
+      "name": "Packages",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6cc38d77-eb97-490a-8f51-d00a8cb8ca43",
+          "name": "Get deployed package",
+          "request": {
+            "name": "Get deployed package",
+            "description": {},
+            "url": {
+              "path": [
+                "apps",
+                ":AppId",
+                "environments",
+                ":Mode",
+                "package"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AppId",
+                  "description": "(Required) Sub-domain name of the app."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Mode",
+                  "description": "(Required) Environment mode."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "48dff1bd-b848-411c-8a6f-3810caf87c23",
+              "name": "Deployed package details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":AppId",
+                    "environments",
+                    ":Mode",
+                    "package"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AppId",
+                      "description": "(Required) Sub-domain name of the app."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "Mode",
+                      "description": "(Required) Environment mode."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "64dbf06a-6b8b-49eb-85d9-7dd41d88bfb5",
+          "name": "Upload deployment package",
+          "request": {
+            "name": "Upload deployment package",
+            "description": {},
+            "url": {
+              "path": [
+                "apps",
+                ":AppId",
+                "packages",
+                "upload"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AppId",
+                  "description": "(Required) Sub-domain name of the app."
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8ee18507-090c-4f7e-9711-25a3863c7a6b",
+              "name": "Package uploaded",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":AppId",
+                    "packages",
+                    "upload"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AppId",
+                      "description": "(Required) Sub-domain name of the app."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4ff4a2f7-5b43-46e6-b551-c2ae22b01e46",
+          "name": "Transport package to environment",
+          "request": {
+            "name": "Transport package to environment",
+            "description": {},
+            "url": {
+              "path": [
+                "apps",
+                ":AppId",
+                "environments",
+                ":Mode",
+                "transport"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AppId",
+                  "description": "(Required) Sub-domain name of the app."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Mode",
+                  "description": "(Required) Environment mode."
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "eaf3bfbb-3807-4425-9f3c-f073c300f636",
+              "name": "Transport accepted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":AppId",
+                    "environments",
+                    ":Mode",
+                    "transport"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AppId",
+                      "description": "(Required) Sub-domain name of the app."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "Mode",
+                      "description": "(Required) Environment mode."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "631273e1-64cf-42fc-b950-7f89369e385a",
+      "name": "Logs",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "fc23f245-6c9e-4697-9690-5011386120a2",
+          "name": "Download app logs for date",
+          "request": {
+            "name": "Download app logs for date",
+            "description": {},
+            "url": {
+              "path": [
+                "apps",
+                ":AppId",
+                "environments",
+                ":Mode",
+                "logs",
+                ":Date"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AppId",
+                  "description": "(Required) Sub-domain name of the app."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Mode",
+                  "description": "(Required) Environment mode."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<date>",
+                  "key": "Date",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9f496cca-a4e7-4b2c-b8bb-36aa49f6b328",
+              "name": "Logs",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":AppId",
+                    "environments",
+                    ":Mode",
+                    "logs",
+                    ":Date"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AppId",
+                      "description": "(Required) Sub-domain name of the app."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "Mode",
+                      "description": "(Required) Environment mode."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<date>",
+                      "key": "Date",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3d3fa755-777c-4879-942f-ddbba52ada01",
+          "name": "Download access logs for date",
+          "request": {
+            "name": "Download access logs for date",
+            "description": {},
+            "url": {
+              "path": [
+                "apps",
+                ":AppId",
+                "environments",
+                ":Mode",
+                "access-logs",
+                ":Date"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AppId",
+                  "description": "(Required) Sub-domain name of the app."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Mode",
+                  "description": "(Required) Environment mode."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<date>",
+                  "key": "Date",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ac053c35-d39b-4931-80cb-6c63fc8b7a8f",
+              "name": "Access logs",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":AppId",
+                    "environments",
+                    ":Mode",
+                    "access-logs",
+                    ":Date"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AppId",
+                      "description": "(Required) Sub-domain name of the app."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "Mode",
+                      "description": "(Required) Environment mode."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<date>",
+                      "key": "Date",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "edbe80b4-f8d9-41e8-af0d-364b845c5d4b",
+      "name": "Tags",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "39337c1a-fba1-48f5-a8c3-2ab26faf728a",
+          "name": "List environment tags",
+          "request": {
+            "name": "List environment tags",
+            "description": {},
+            "url": {
+              "path": [
+                "apps",
+                ":AppId",
+                "environments",
+                ":Mode",
+                "tags"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AppId",
+                  "description": "(Required) Sub-domain name of the app."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Mode",
+                  "description": "(Required) Environment mode."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a462fee7-2e0c-4b03-82c9-72bb5a69e9cf",
+              "name": "Tags",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":AppId",
+                    "environments",
+                    ":Mode",
+                    "tags"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AppId",
+                      "description": "(Required) Sub-domain name of the app."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "Mode",
+                      "description": "(Required) Environment mode."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b43c75e7-a910-4691-93bc-eea7bf1d2242",
+          "name": "Create environment tag",
+          "request": {
+            "name": "Create environment tag",
+            "description": {},
+            "url": {
+              "path": [
+                "apps",
+                ":AppId",
+                "environments",
+                ":Mode",
+                "tags"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AppId",
+                  "description": "(Required) Sub-domain name of the app."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Mode",
+                  "description": "(Required) Environment mode."
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "71256251-311e-458a-ac93-f515f816e72b",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":AppId",
+                    "environments",
+                    ":Mode",
+                    "tags"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AppId",
+                      "description": "(Required) Sub-domain name of the app."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "Mode",
+                      "description": "(Required) Environment mode."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3dea0e7f-258b-461b-bba9-f46646095480",
+          "name": "Delete environment tags",
+          "request": {
+            "name": "Delete environment tags",
+            "description": {},
+            "url": {
+              "path": [
+                "apps",
+                ":AppId",
+                "environments",
+                ":Mode",
+                "tags"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AppId",
+                  "description": "(Required) Sub-domain name of the app."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Mode",
+                  "description": "(Required) Environment mode."
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0216801f-6cde-42db-bf01-2087b0ef3528",
+              "name": "Deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":AppId",
+                    "environments",
+                    ":Mode",
+                    "tags"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AppId",
+                      "description": "(Required) Sub-domain name of the app."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "Mode",
+                      "description": "(Required) Environment mode."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://deploy.mendix.com/api/1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Mendix-ApiKey"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "1b695521-4c1b-4e4b-96cd-e1d635ba485b",
+    "name": "Mendix Deploy API v1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Mendix Deploy API manages apps, environments, deployment packages,\ntransports, logs, scaling, settings, and tags on Mendix Cloud. Authentication\nuses the Mendix-Username and Mendix-ApiKey request headers tied to a Mendix\nuser account.\n\n\nContact Support:\n Name: Mendix",
+      "type": "text/plain"
+    }
+  }
+}
