@@ -1,0 +1,18 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/mendix-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: mendixApiKey
+  type: apiKey
+  in: header
+  parameter: Mendix-ApiKey
+  description: |-
+    Mendix API key. Must be paired with a Mendix-Username header containing the
+    login name of the user the key belongs to.
+  sources:
+  - openapi/mendix-openapi.yml

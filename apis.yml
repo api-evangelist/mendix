@@ -71,6 +71,12 @@ apis:
       - type: Documentation
         url: https://docs.mendix.com/apidocs-mxsdk/apidocs/app-repository-api/
 common:
+  - type: VulnerabilityDisclosure
+    url: security/mendix-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/mendix-domain-security.yml
+  - type: Authentication
+    url: authentication/mendix-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/mendix
   - type: LinkedIn
@@ -85,6 +91,8 @@ common:
     url: https://signup.mendix.com/
   - type: LlmsText
     url: https://mendix.com/llms.txt
+  - url: https://www.mendix.com/feed/
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
