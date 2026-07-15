@@ -71,6 +71,8 @@ apis:
       - type: Documentation
         url: https://docs.mendix.com/apidocs-mxsdk/apidocs/app-repository-api/
 common:
+  - type: AgenticAccess
+    url: agentic-access/mendix-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/mendix-vulnerability-disclosure.yml
   - type: DomainSecurity
