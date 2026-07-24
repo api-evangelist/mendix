@@ -1,0 +1,70 @@
+openapi: 3.1.0
+info:
+  title: Mendix Deploy API v1 Apps API
+  description: 'The Mendix Deploy API manages apps, environments, deployment packages,
+
+    transports, logs, scaling, settings, and tags on Mendix Cloud. Authentication
+
+    uses the Mendix-Username and Mendix-ApiKey request headers tied to a Mendix
+
+    user account.
+
+    '
+  version: '1'
+  contact:
+    name: Mendix
+    url: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/
+servers:
+- url: https://deploy.mendix.com/api/1
+  description: Mendix Cloud Deploy API v1
+security:
+- mendixApiKey: []
+tags:
+- name: Apps
+paths:
+  /apps:
+    get:
+      tags:
+      - Apps
+      summary: List apps
+      description: Retrieve all apps accessible to the authenticated user on Mendix Cloud.
+      responses:
+        '200':
+          description: Apps list
+    post:
+      tags:
+      - Apps
+      summary: Create a Free App
+      description: Create a new Free App environment.
+      responses:
+        '201':
+          description: App created
+  /apps/{AppId}:
+    parameters:
+    - $ref: '#/components/parameters/AppId'
+    get:
+      tags:
+      - Apps
+      summary: Get app details
+      responses:
+        '200':
+          description: App details
+components:
+  parameters:
+    AppId:
+      name: AppId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Sub-domain name of the app.
+  securitySchemes:
+    mendixApiKey:
+      type: apiKey
+      in: header
+      name: Mendix-ApiKey
+      description: 'Mendix API key. Must be paired with a Mendix-Username header containing the
+
+        login name of the user the key belongs to.
+
+        '
