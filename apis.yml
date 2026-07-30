@@ -10,7 +10,19 @@ description: >-
   User Management, Content, Studio Pro, and Apps APIs) secured by API keys
   or personal access tokens (PATs).
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mendix.png
 tags:
   - Low-Code
   - Application Development
@@ -24,52 +36,101 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: mendix:deploy-api
-    name: Mendix Deploy API
-    description: >-
-      REST API for managing apps, environments, deployment packages, transports,
-      backups, and deployment lifecycle on Mendix Cloud. Authentication is via
-      Mendix-Username and Mendix-ApiKey request headers tied to the requesting
-      user's API key and platform permissions.
-    humanURL: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/
-    baseURL: https://deploy.mendix.com/api/1
-    tags:
-      - Low-Code
-      - Deployment
-      - Application Lifecycle
-    properties:
-      - type: Documentation
-        url: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/
-      - type: Deploy API v2
-        url: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api-2/
-  - aid: mendix:build-api
-    name: Mendix Build API
-    description: >-
-      REST API for managing app projects, branches, revisions, and build
-      packages in Mendix Team Server. Uses Mendix API key authentication.
-    humanURL: https://docs.mendix.com/apidocs-mxsdk/apidocs/build-api/
-    baseURL: https://deploy.mendix.com/api/1
-    tags:
-      - Low-Code
-      - Build
-      - Source Control
-    properties:
-      - type: Documentation
-        url: https://docs.mendix.com/apidocs-mxsdk/apidocs/build-api/
-  - aid: mendix:app-repository-api
-    name: Mendix App Repository API
-    description: >-
-      REST API for managing apps, members, and repository metadata in the
-      Mendix platform. Uses PAT or Mendix API key authentication.
-    humanURL: https://docs.mendix.com/apidocs-mxsdk/apidocs/app-repository-api/
-    baseURL: https://repository.api.mendix.com
-    tags:
-      - Low-Code
-      - App Management
-      - Governance
-    properties:
-      - type: Documentation
-        url: https://docs.mendix.com/apidocs-mxsdk/apidocs/app-repository-api/
+- aid: mendix:deploy-api
+  name: Mendix Deploy API
+  description: >-
+    REST API for managing apps, environments, deployment packages, transports, backups, and deployment
+    lifecycle on Mendix Cloud. Authentication is via Mendix-Username and Mendix-ApiKey request headers
+    tied to the requesting user's API key and platform permissions.
+  humanURL: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/
+  baseURL: https://deploy.mendix.com/api/1
+  tags:
+  - Low-Code
+  - Deployment
+  - Application Lifecycle
+  properties:
+  - type: Documentation
+    url: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/
+  - type: Deploy API v2
+    url: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api-2/
+- aid: mendix:build-api
+  name: Mendix Build API
+  description: >-
+    REST API for managing app projects, branches, revisions, and build packages in Mendix Team Server.
+    Uses Mendix API key authentication.
+  humanURL: https://docs.mendix.com/apidocs-mxsdk/apidocs/build-api/
+  baseURL: https://deploy.mendix.com/api/1
+  tags:
+  - Low-Code
+  - Build
+  - Source Control
+  properties:
+  - type: Documentation
+    url: https://docs.mendix.com/apidocs-mxsdk/apidocs/build-api/
+- aid: mendix:app-repository-api
+  name: Mendix App Repository API
+  description: >-
+    REST API for managing apps, members, and repository metadata in the Mendix platform. Uses PAT or Mendix
+    API key authentication.
+  humanURL: https://docs.mendix.com/apidocs-mxsdk/apidocs/app-repository-api/
+  baseURL: https://repository.api.mendix.com
+  tags:
+  - Low-Code
+  - App Management
+  - Governance
+  properties:
+  - type: Documentation
+    url: https://docs.mendix.com/apidocs-mxsdk/apidocs/app-repository-api/
+- aid: mendix:mendix-apps-api
+  name: Mendix Apps API
+  description: The Apps API from Mendix — 2 operation(s) for apps.
+  humanURL: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/
+  baseURL: https://deploy.mendix.com/api/1
+  tags:
+  - Apps
+  properties:
+  - type: OpenAPI
+    url: openapi/mendix-apps-api-openapi.yml
+- aid: mendix:mendix-environments-api
+  name: Mendix Environments API
+  description: The Environments API from Mendix — 8 operation(s) for environments.
+  humanURL: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/
+  baseURL: https://deploy.mendix.com/api/1
+  tags:
+  - Environments
+  properties:
+  - type: OpenAPI
+    url: openapi/mendix-environments-api-openapi.yml
+- aid: mendix:mendix-logs-api
+  name: Mendix Logs API
+  description: The Logs API from Mendix — 2 operation(s) for logs.
+  humanURL: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/
+  baseURL: https://deploy.mendix.com/api/1
+  tags:
+  - Logs
+  properties:
+  - type: OpenAPI
+    url: openapi/mendix-logs-api-openapi.yml
+- aid: mendix:mendix-packages-api
+  name: Mendix Packages API
+  description: The Packages API from Mendix — 3 operation(s) for packages.
+  humanURL: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/
+  baseURL: https://deploy.mendix.com/api/1
+  tags:
+  - Packages
+  properties:
+  - type: OpenAPI
+    url: openapi/mendix-packages-api-openapi.yml
+- aid: mendix:mendix-tags-api
+  name: Mendix Tags API
+  description: The Tags API from Mendix — 1 operation(s) for tags.
+  humanURL: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/
+  baseURL: https://deploy.mendix.com/api/1
+  tags:
+  - Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/mendix-tags-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/mendix-agentic-access.yml
