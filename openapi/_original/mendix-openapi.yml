@@ -1,0 +1,246 @@
+openapi: 3.1.0
+info:
+  title: Mendix Deploy API v1
+  description: |
+    The Mendix Deploy API manages apps, environments, deployment packages,
+    transports, logs, scaling, settings, and tags on Mendix Cloud. Authentication
+    uses the Mendix-Username and Mendix-ApiKey request headers tied to a Mendix
+    user account.
+  version: "1"
+  contact:
+    name: Mendix
+    url: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/
+servers:
+  - url: https://deploy.mendix.com/api/1
+    description: Mendix Cloud Deploy API v1
+security:
+  - mendixApiKey: []
+tags:
+  - name: Apps
+  - name: Environments
+  - name: Packages
+  - name: Logs
+  - name: Tags
+paths:
+  /apps:
+    get:
+      tags: [Apps]
+      summary: List apps
+      description: Retrieve all apps accessible to the authenticated user on Mendix Cloud.
+      responses:
+        "200":
+          description: Apps list
+    post:
+      tags: [Apps]
+      summary: Create a Free App
+      description: Create a new Free App environment.
+      responses:
+        "201":
+          description: App created
+  /apps/{AppId}:
+    parameters:
+      - $ref: "#/components/parameters/AppId"
+    get:
+      tags: [Apps]
+      summary: Get app details
+      responses:
+        "200":
+          description: App details
+  /apps/{AppId}/environments:
+    parameters:
+      - $ref: "#/components/parameters/AppId"
+    get:
+      tags: [Environments]
+      summary: List environments
+      responses:
+        "200":
+          description: Environments
+  /apps/{AppId}/environments/{Mode}:
+    parameters:
+      - $ref: "#/components/parameters/AppId"
+      - $ref: "#/components/parameters/Mode"
+    get:
+      tags: [Environments]
+      summary: Get environment
+      responses:
+        "200":
+          description: Environment
+  /apps/{AppId}/environments/{Mode}/start:
+    parameters:
+      - $ref: "#/components/parameters/AppId"
+      - $ref: "#/components/parameters/Mode"
+    post:
+      tags: [Environments]
+      summary: Start environment
+      responses:
+        "200":
+          description: Start job accepted
+  /apps/{AppId}/environments/{Mode}/start/{JobId}:
+    parameters:
+      - $ref: "#/components/parameters/AppId"
+      - $ref: "#/components/parameters/Mode"
+      - name: JobId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Environments]
+      summary: Check environment start status
+      responses:
+        "200":
+          description: Job status
+  /apps/{AppId}/environments/{Mode}/stop:
+    parameters:
+      - $ref: "#/components/parameters/AppId"
+      - $ref: "#/components/parameters/Mode"
+    post:
+      tags: [Environments]
+      summary: Stop environment
+      responses:
+        "200":
+          description: Stopped
+  /apps/{AppId}/environments/{Mode}/package:
+    parameters:
+      - $ref: "#/components/parameters/AppId"
+      - $ref: "#/components/parameters/Mode"
+    get:
+      tags: [Packages]
+      summary: Get deployed package
+      responses:
+        "200":
+          description: Deployed package details
+  /apps/{AppId}/packages/upload:
+    parameters:
+      - $ref: "#/components/parameters/AppId"
+    post:
+      tags: [Packages]
+      summary: Upload deployment package
+      responses:
+        "200":
+          description: Package uploaded
+  /apps/{AppId}/environments/{Mode}/transport:
+    parameters:
+      - $ref: "#/components/parameters/AppId"
+      - $ref: "#/components/parameters/Mode"
+    post:
+      tags: [Packages]
+      summary: Transport package to environment
+      responses:
+        "200":
+          description: Transport accepted
+  /apps/{AppId}/environments/{Mode}/clean:
+    parameters:
+      - $ref: "#/components/parameters/AppId"
+      - $ref: "#/components/parameters/Mode"
+    post:
+      tags: [Environments]
+      summary: Clean environment data
+      responses:
+        "200":
+          description: Clean accepted
+  /apps/{AppId}/environments/{Mode}/settings:
+    parameters:
+      - $ref: "#/components/parameters/AppId"
+      - $ref: "#/components/parameters/Mode"
+    get:
+      tags: [Environments]
+      summary: Get environment settings
+      responses:
+        "200":
+          description: Settings
+    post:
+      tags: [Environments]
+      summary: Update environment settings
+      responses:
+        "200":
+          description: Updated
+  /apps/{AppId}/environments/{Mode}/scale:
+    parameters:
+      - $ref: "#/components/parameters/AppId"
+      - $ref: "#/components/parameters/Mode"
+    post:
+      tags: [Environments]
+      summary: Scale memory and instances
+      responses:
+        "200":
+          description: Scaled
+  /apps/{AppId}/environments/{Mode}/tags:
+    parameters:
+      - $ref: "#/components/parameters/AppId"
+      - $ref: "#/components/parameters/Mode"
+    get:
+      tags: [Tags]
+      summary: List environment tags
+      responses:
+        "200":
+          description: Tags
+    post:
+      tags: [Tags]
+      summary: Create environment tag
+      responses:
+        "201":
+          description: Created
+    delete:
+      tags: [Tags]
+      summary: Delete environment tags
+      responses:
+        "204":
+          description: Deleted
+  /apps/{AppId}/environments/{Mode}/logs/{Date}:
+    parameters:
+      - $ref: "#/components/parameters/AppId"
+      - $ref: "#/components/parameters/Mode"
+      - name: Date
+        in: path
+        required: true
+        schema:
+          type: string
+          format: date
+    get:
+      tags: [Logs]
+      summary: Download app logs for date
+      responses:
+        "200":
+          description: Logs
+  /apps/{AppId}/environments/{Mode}/access-logs/{Date}:
+    parameters:
+      - $ref: "#/components/parameters/AppId"
+      - $ref: "#/components/parameters/Mode"
+      - name: Date
+        in: path
+        required: true
+        schema:
+          type: string
+          format: date
+    get:
+      tags: [Logs]
+      summary: Download access logs for date
+      responses:
+        "200":
+          description: Access logs
+components:
+  parameters:
+    AppId:
+      name: AppId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Sub-domain name of the app.
+    Mode:
+      name: Mode
+      in: path
+      required: true
+      schema:
+        type: string
+        enum: [Test, Acceptance, Production]
+      description: Environment mode.
+  securitySchemes:
+    mendixApiKey:
+      type: apiKey
+      in: header
+      name: Mendix-ApiKey
+      description: |
+        Mendix API key. Must be paired with a Mendix-Username header containing the
+        login name of the user the key belongs to.

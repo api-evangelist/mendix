@@ -1,0 +1,22 @@
+{
+  "provider": "mendix",
+  "sources": [
+    "mendix-apps-api-openapi.yml",
+    "mendix-environments-api-openapi.yml",
+    "mendix-logs-api-openapi.yml",
+    "mendix-packages-api-openapi.yml",
+    "mendix-tags-api-openapi.yml"
+  ],
+  "outputs": [
+    "mendix-apps-api-openapi.yml",
+    "mendix-environments-api-openapi.yml",
+    "mendix-logs-api-openapi.yml",
+    "mendix-packages-api-openapi.yml",
+    "mendix-tags-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
