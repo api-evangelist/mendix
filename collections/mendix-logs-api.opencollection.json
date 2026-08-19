@@ -1,0 +1,86 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mendix Deploy API v1 Apps Logs API",
+    "version": "1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Mendix-ApiKey",
+      "value": "{{Mendix-ApiKey}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Logs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Download app logs for date",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://deploy.mendix.com/api/1/apps/:AppId/environments/:Mode/logs/:Date",
+            "params": [
+              {
+                "name": "AppId",
+                "value": "",
+                "type": "path",
+                "description": "Sub-domain name of the app."
+              },
+              {
+                "name": "Mode",
+                "value": "",
+                "type": "path",
+                "description": "Environment mode."
+              },
+              {
+                "name": "Date",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Download app logs for date"
+        },
+        {
+          "info": {
+            "name": "Download access logs for date",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://deploy.mendix.com/api/1/apps/:AppId/environments/:Mode/access-logs/:Date",
+            "params": [
+              {
+                "name": "AppId",
+                "value": "",
+                "type": "path",
+                "description": "Sub-domain name of the app."
+              },
+              {
+                "name": "Mode",
+                "value": "",
+                "type": "path",
+                "description": "Environment mode."
+              },
+              {
+                "name": "Date",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Download access logs for date"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

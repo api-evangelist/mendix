@@ -1,0 +1,95 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mendix Deploy API v1 Apps Packages API",
+    "version": "1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Mendix-ApiKey",
+      "value": "{{Mendix-ApiKey}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Packages",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get deployed package",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://deploy.mendix.com/api/1/apps/:AppId/environments/:Mode/package",
+            "params": [
+              {
+                "name": "AppId",
+                "value": "",
+                "type": "path",
+                "description": "Sub-domain name of the app."
+              },
+              {
+                "name": "Mode",
+                "value": "",
+                "type": "path",
+                "description": "Environment mode."
+              }
+            ]
+          },
+          "docs": "Get deployed package"
+        },
+        {
+          "info": {
+            "name": "Upload deployment package",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://deploy.mendix.com/api/1/apps/:AppId/packages/upload",
+            "params": [
+              {
+                "name": "AppId",
+                "value": "",
+                "type": "path",
+                "description": "Sub-domain name of the app."
+              }
+            ]
+          },
+          "docs": "Upload deployment package"
+        },
+        {
+          "info": {
+            "name": "Transport package to environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://deploy.mendix.com/api/1/apps/:AppId/environments/:Mode/transport",
+            "params": [
+              {
+                "name": "AppId",
+                "value": "",
+                "type": "path",
+                "description": "Sub-domain name of the app."
+              },
+              {
+                "name": "Mode",
+                "value": "",
+                "type": "path",
+                "description": "Environment mode."
+              }
+            ]
+          },
+          "docs": "Transport package to environment"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

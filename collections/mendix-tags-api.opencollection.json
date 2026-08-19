@@ -1,0 +1,101 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mendix Deploy API v1 Apps Tags API",
+    "version": "1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Mendix-ApiKey",
+      "value": "{{Mendix-ApiKey}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tags",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List environment tags",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://deploy.mendix.com/api/1/apps/:AppId/environments/:Mode/tags",
+            "params": [
+              {
+                "name": "AppId",
+                "value": "",
+                "type": "path",
+                "description": "Sub-domain name of the app."
+              },
+              {
+                "name": "Mode",
+                "value": "",
+                "type": "path",
+                "description": "Environment mode."
+              }
+            ]
+          },
+          "docs": "List environment tags"
+        },
+        {
+          "info": {
+            "name": "Create environment tag",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://deploy.mendix.com/api/1/apps/:AppId/environments/:Mode/tags",
+            "params": [
+              {
+                "name": "AppId",
+                "value": "",
+                "type": "path",
+                "description": "Sub-domain name of the app."
+              },
+              {
+                "name": "Mode",
+                "value": "",
+                "type": "path",
+                "description": "Environment mode."
+              }
+            ]
+          },
+          "docs": "Create environment tag"
+        },
+        {
+          "info": {
+            "name": "Delete environment tags",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://deploy.mendix.com/api/1/apps/:AppId/environments/:Mode/tags",
+            "params": [
+              {
+                "name": "AppId",
+                "value": "",
+                "type": "path",
+                "description": "Sub-domain name of the app."
+              },
+              {
+                "name": "Mode",
+                "value": "",
+                "type": "path",
+                "description": "Environment mode."
+              }
+            ]
+          },
+          "docs": "Delete environment tags"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

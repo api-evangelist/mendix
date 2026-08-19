@@ -1,0 +1,250 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mendix Deploy API v1 Apps Environments API",
+    "version": "1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Mendix-ApiKey",
+      "value": "{{Mendix-ApiKey}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Environments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List environments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://deploy.mendix.com/api/1/apps/:AppId/environments",
+            "params": [
+              {
+                "name": "AppId",
+                "value": "",
+                "type": "path",
+                "description": "Sub-domain name of the app."
+              }
+            ]
+          },
+          "docs": "List environments"
+        },
+        {
+          "info": {
+            "name": "Get environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://deploy.mendix.com/api/1/apps/:AppId/environments/:Mode",
+            "params": [
+              {
+                "name": "AppId",
+                "value": "",
+                "type": "path",
+                "description": "Sub-domain name of the app."
+              },
+              {
+                "name": "Mode",
+                "value": "",
+                "type": "path",
+                "description": "Environment mode."
+              }
+            ]
+          },
+          "docs": "Get environment"
+        },
+        {
+          "info": {
+            "name": "Start environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://deploy.mendix.com/api/1/apps/:AppId/environments/:Mode/start",
+            "params": [
+              {
+                "name": "AppId",
+                "value": "",
+                "type": "path",
+                "description": "Sub-domain name of the app."
+              },
+              {
+                "name": "Mode",
+                "value": "",
+                "type": "path",
+                "description": "Environment mode."
+              }
+            ]
+          },
+          "docs": "Start environment"
+        },
+        {
+          "info": {
+            "name": "Check environment start status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://deploy.mendix.com/api/1/apps/:AppId/environments/:Mode/start/:JobId",
+            "params": [
+              {
+                "name": "AppId",
+                "value": "",
+                "type": "path",
+                "description": "Sub-domain name of the app."
+              },
+              {
+                "name": "Mode",
+                "value": "",
+                "type": "path",
+                "description": "Environment mode."
+              },
+              {
+                "name": "JobId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Check environment start status"
+        },
+        {
+          "info": {
+            "name": "Stop environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://deploy.mendix.com/api/1/apps/:AppId/environments/:Mode/stop",
+            "params": [
+              {
+                "name": "AppId",
+                "value": "",
+                "type": "path",
+                "description": "Sub-domain name of the app."
+              },
+              {
+                "name": "Mode",
+                "value": "",
+                "type": "path",
+                "description": "Environment mode."
+              }
+            ]
+          },
+          "docs": "Stop environment"
+        },
+        {
+          "info": {
+            "name": "Clean environment data",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://deploy.mendix.com/api/1/apps/:AppId/environments/:Mode/clean",
+            "params": [
+              {
+                "name": "AppId",
+                "value": "",
+                "type": "path",
+                "description": "Sub-domain name of the app."
+              },
+              {
+                "name": "Mode",
+                "value": "",
+                "type": "path",
+                "description": "Environment mode."
+              }
+            ]
+          },
+          "docs": "Clean environment data"
+        },
+        {
+          "info": {
+            "name": "Get environment settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://deploy.mendix.com/api/1/apps/:AppId/environments/:Mode/settings",
+            "params": [
+              {
+                "name": "AppId",
+                "value": "",
+                "type": "path",
+                "description": "Sub-domain name of the app."
+              },
+              {
+                "name": "Mode",
+                "value": "",
+                "type": "path",
+                "description": "Environment mode."
+              }
+            ]
+          },
+          "docs": "Get environment settings"
+        },
+        {
+          "info": {
+            "name": "Update environment settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://deploy.mendix.com/api/1/apps/:AppId/environments/:Mode/settings",
+            "params": [
+              {
+                "name": "AppId",
+                "value": "",
+                "type": "path",
+                "description": "Sub-domain name of the app."
+              },
+              {
+                "name": "Mode",
+                "value": "",
+                "type": "path",
+                "description": "Environment mode."
+              }
+            ]
+          },
+          "docs": "Update environment settings"
+        },
+        {
+          "info": {
+            "name": "Scale memory and instances",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://deploy.mendix.com/api/1/apps/:AppId/environments/:Mode/scale",
+            "params": [
+              {
+                "name": "AppId",
+                "value": "",
+                "type": "path",
+                "description": "Sub-domain name of the app."
+              },
+              {
+                "name": "Mode",
+                "value": "",
+                "type": "path",
+                "description": "Environment mode."
+              }
+            ]
+          },
+          "docs": "Scale memory and instances"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

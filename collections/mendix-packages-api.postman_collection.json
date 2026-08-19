@@ -1,0 +1,342 @@
+{
+  "item": [
+    {
+      "id": "bbe02a4a-bd7b-43c1-960a-0b21df08b78c",
+      "name": "Packages",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f1c28a39-cb89-4a54-b763-b96124185d3f",
+          "name": "Get deployed package",
+          "request": {
+            "name": "Get deployed package",
+            "description": {},
+            "url": {
+              "path": [
+                "apps",
+                ":AppId",
+                "environments",
+                ":Mode",
+                "package"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AppId",
+                  "description": "(Required) Sub-domain name of the app."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Mode",
+                  "description": "(Required) Environment mode."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ed96fe0f-6081-4c1a-a523-1d0d4e68cd46",
+              "name": "Deployed package details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":AppId",
+                    "environments",
+                    ":Mode",
+                    "package"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AppId",
+                      "description": "(Required) Sub-domain name of the app."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "Mode",
+                      "description": "(Required) Environment mode."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b63ba7c1-c81d-4722-bd8f-46e43a127ab4",
+          "name": "Upload deployment package",
+          "request": {
+            "name": "Upload deployment package",
+            "description": {},
+            "url": {
+              "path": [
+                "apps",
+                ":AppId",
+                "packages",
+                "upload"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AppId",
+                  "description": "(Required) Sub-domain name of the app."
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "243db43c-760d-48fc-80bf-31ac18349e84",
+              "name": "Package uploaded",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":AppId",
+                    "packages",
+                    "upload"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AppId",
+                      "description": "(Required) Sub-domain name of the app."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f49c19fb-b4a0-43b2-8d02-5b817cca25b6",
+          "name": "Transport package to environment",
+          "request": {
+            "name": "Transport package to environment",
+            "description": {},
+            "url": {
+              "path": [
+                "apps",
+                ":AppId",
+                "environments",
+                ":Mode",
+                "transport"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AppId",
+                  "description": "(Required) Sub-domain name of the app."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Mode",
+                  "description": "(Required) Environment mode."
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2b9b2aa6-2f0d-4471-86df-06a5a7f2393d",
+              "name": "Transport accepted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":AppId",
+                    "environments",
+                    ":Mode",
+                    "transport"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AppId",
+                      "description": "(Required) Sub-domain name of the app."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "Mode",
+                      "description": "(Required) Environment mode."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Mendix-ApiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://deploy.mendix.com/api/1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Mendix-ApiKey"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "20029e58-790d-40bd-8326-477b5e4948a5",
+    "name": "Mendix Deploy API v1 Apps Packages API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Mendix Deploy API manages apps, environments, deployment packages,\ntransports, logs, scaling, settings, and tags on Mendix Cloud. Authentication\nuses the Mendix-Username and Mendix-ApiKey request headers tied to a Mendix\nuser account.\n\n\nContact Support:\n Name: Mendix",
+      "type": "text/plain"
+    }
+  }
+}
