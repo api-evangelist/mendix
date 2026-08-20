@@ -62,6 +62,10 @@ apis:
   baseURL: https://deploy.mendix.com/api/1
   tags:
   - Low-Code
+  - Builds
+  - Source Control
+  tags_raw:
+  - Low-Code
   - Build
   - Source Control
   properties:
@@ -87,6 +91,8 @@ apis:
   humanURL: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/
   baseURL: https://deploy.mendix.com/api/1
   tags:
+  - Application
+  tags_raw:
   - Apps
   properties:
   - type: OpenAPI
