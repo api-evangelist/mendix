@@ -116,6 +116,8 @@ apis:
   humanURL: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/
   baseURL: https://deploy.mendix.com/api/1
   tags:
+  - Environment
+  tags_raw:
   - Environments
   properties:
   - type: OpenAPI
