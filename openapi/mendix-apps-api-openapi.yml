@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Mendix Deploy API v1 Apps API
   description: 'The Mendix Deploy API manages apps, environments, deployment packages,
@@ -7,9 +7,7 @@ info:
 
     uses the Mendix-Username and Mendix-ApiKey request headers tied to a Mendix
 
-    user account.
-
-    '
+    user account.'
   version: '1'
   contact:
     name: Mendix
@@ -31,6 +29,8 @@ paths:
       responses:
         '200':
           description: Apps list
+      operationId: getApps
+      x-operation-id-source: derived
     post:
       tags:
       - Apps
@@ -39,6 +39,8 @@ paths:
       responses:
         '201':
           description: App created
+      operationId: postApps
+      x-operation-id-source: derived
   /apps/{AppId}:
     parameters:
     - $ref: '#/components/parameters/AppId'
@@ -49,6 +51,8 @@ paths:
       responses:
         '200':
           description: App details
+      operationId: getAppsByAppId
+      x-operation-id-source: derived
 components:
   parameters:
     AppId:

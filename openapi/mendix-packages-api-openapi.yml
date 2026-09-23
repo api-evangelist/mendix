@@ -1,15 +1,13 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Mendix Deploy API v1 Apps Packages API
+  title: Mendix Deploy API v1 Packages API
   description: 'The Mendix Deploy API manages apps, environments, deployment packages,
 
     transports, logs, scaling, settings, and tags on Mendix Cloud. Authentication
 
     uses the Mendix-Username and Mendix-ApiKey request headers tied to a Mendix
 
-    user account.
-
-    '
+    user account.'
   version: '1'
   contact:
     name: Mendix
@@ -33,6 +31,8 @@ paths:
       responses:
         '200':
           description: Deployed package details
+      operationId: getAppsByAppIdEnvironmentsByModePackage
+      x-operation-id-source: derived
   /apps/{AppId}/packages/upload:
     parameters:
     - $ref: '#/components/parameters/AppId'
@@ -43,6 +43,8 @@ paths:
       responses:
         '200':
           description: Package uploaded
+      operationId: postAppsByAppIdPackagesUpload
+      x-operation-id-source: derived
   /apps/{AppId}/environments/{Mode}/transport:
     parameters:
     - $ref: '#/components/parameters/AppId'
@@ -54,6 +56,8 @@ paths:
       responses:
         '200':
           description: Transport accepted
+      operationId: postAppsByAppIdEnvironmentsByModeTransport
+      x-operation-id-source: derived
 components:
   parameters:
     Mode:
