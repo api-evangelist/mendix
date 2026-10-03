@@ -53,13 +53,6 @@ paths:
       x-operation-id-source: derived
 components:
   parameters:
-    AppId:
-      name: AppId
-      in: path
-      required: true
-      schema:
-        type: string
-      description: Sub-domain name of the app.
     Mode:
       name: Mode
       in: path
@@ -71,6 +64,13 @@ components:
         - Acceptance
         - Production
       description: Environment mode.
+    AppId:
+      name: AppId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Sub-domain name of the app.
   securitySchemes:
     mendixApiKey:
       type: apiKey
