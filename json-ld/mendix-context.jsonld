@@ -1,0 +1,261 @@
+{
+  "@context": {
+    "@vocab": "https://mendix.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "mendix": "https://mendix.com/schema#",
+    "EnvironmentCreateRequest": "mendix:EnvironmentCreateRequest",
+    "displayName": {
+      "@id": "mendix:displayName",
+      "@type": "xsd:string"
+    },
+    "clusterName": {
+      "@id": "mendix:clusterName",
+      "@type": "xsd:string"
+    },
+    "namespace": {
+      "@id": "mendix:namespace",
+      "@type": "xsd:string"
+    },
+    "storagePlanName": {
+      "@id": "mendix:storagePlanName",
+      "@type": "xsd:string"
+    },
+    "databasePlanName": {
+      "@id": "mendix:databasePlanName",
+      "@type": "xsd:string"
+    },
+    "deploymentPackageName": {
+      "@id": "mendix:deploymentPackageName",
+      "@type": "xsd:string"
+    },
+    "deploymentPurpose": {
+      "@id": "mendix:deploymentPurpose",
+      "@type": "xsd:string"
+    },
+    "isExternalSecretStoreEnabled": {
+      "@id": "mendix:isExternalSecretStoreEnabled",
+      "@type": "xsd:string"
+    },
+    "coreResourcePlan": {
+      "@id": "mendix:coreResourcePlan",
+      "@type": "xsd:string"
+    },
+    "coreResourceSize": {
+      "@id": "mendix:coreResourceSize",
+      "@type": "xsd:string"
+    },
+    "ConfigurationPatchRequest": "mendix:ConfigurationPatchRequest",
+    "dtapMode": {
+      "@id": "mendix:dtapMode",
+      "@type": "xsd:string"
+    },
+    "replicas": {
+      "@id": "mendix:replicas",
+      "@type": "xsd:integer"
+    },
+    "appUrl": {
+      "@id": "mendix:appUrl",
+      "@type": "xsd:string"
+    },
+    "clientIdForSecretStore": {
+      "@id": "mendix:clientIdForSecretStore",
+      "@type": "xsd:string"
+    },
+    "adminPassword": {
+      "@id": "mendix:adminPassword",
+      "@type": "xsd:string"
+    },
+    "isAdminPasswordSecretStore": {
+      "@id": "mendix:isAdminPasswordSecretStore",
+      "@type": "xsd:string"
+    },
+    "leaderlessMode": {
+      "@id": "mendix:leaderlessMode",
+      "@type": "xsd:string"
+    },
+    "Constants": {
+      "@id": "mendix:Constants",
+      "@container": "@list"
+    },
+    "ScheduledEvents": {
+      "@id": "mendix:ScheduledEvents",
+      "@container": "@list"
+    },
+    "CustomEnvironmentVariables": {
+      "@id": "mendix:CustomEnvironmentVariables",
+      "@container": "@list"
+    },
+    "CustomRuntimeSettings": {
+      "@id": "mendix:CustomRuntimeSettings",
+      "@container": "@list"
+    },
+    "CustomHttpHeaders": {
+      "@id": "mendix:CustomHttpHeaders",
+      "@container": "@list"
+    },
+    "CustomJVMOptions": {
+      "@id": "mendix:CustomJVMOptions"
+    },
+    "CustomJettyOptions": {
+      "@id": "mendix:CustomJettyOptions"
+    },
+    "Debugger": {
+      "@id": "mendix:Debugger"
+    },
+    "LogLevels": {
+      "@id": "mendix:LogLevels",
+      "@container": "@list"
+    },
+    "ClientCertificates": {
+      "@id": "mendix:ClientCertificates",
+      "@container": "@list"
+    },
+    "CustomTLSConfig": {
+      "@id": "mendix:CustomTLSConfig"
+    },
+    "CoreResource": {
+      "@id": "mendix:CoreResource"
+    },
+    "ConfigurationDeleteRequest": "mendix:ConfigurationDeleteRequest",
+    "AsyncOperationResponse": "mendix:AsyncOperationResponse",
+    "environmentId": {
+      "@id": "mendix:environmentId",
+      "@type": "xsd:string"
+    },
+    "pipelineId": {
+      "@id": "mendix:pipelineId",
+      "@type": "xsd:integer"
+    },
+    "message": {
+      "@id": "mendix:message",
+      "@type": "xsd:string"
+    },
+    "Environment": "mendix:Environment",
+    "internalName": {
+      "@id": "mendix:internalName",
+      "@type": "xsd:string"
+    },
+    "appName": {
+      "@id": "mendix:appName",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "mendix:status",
+      "@type": "xsd:string"
+    },
+    "readyReplicas": {
+      "@id": "mendix:readyReplicas",
+      "@type": "xsd:integer"
+    },
+    "isAppStopped": {
+      "@id": "mendix:isAppStopped",
+      "@type": "xsd:boolean"
+    },
+    "isManualDeploy": {
+      "@id": "mendix:isManualDeploy",
+      "@type": "xsd:boolean"
+    },
+    "buildStatus": {
+      "@id": "mendix:buildStatus",
+      "@type": "xsd:string"
+    },
+    "runtimeStatus": {
+      "@id": "mendix:runtimeStatus",
+      "@type": "xsd:string"
+    },
+    "networkStatus": {
+      "@id": "mendix:networkStatus",
+      "@type": "xsd:string"
+    },
+    "databaseStatus": {
+      "@id": "mendix:databaseStatus",
+      "@type": "xsd:string"
+    },
+    "storageStatus": {
+      "@id": "mendix:storageStatus",
+      "@type": "xsd:string"
+    },
+    "licenseStatus": {
+      "@id": "mendix:licenseStatus",
+      "@type": "xsd:string"
+    },
+    "creationStatus": {
+      "@id": "mendix:creationStatus",
+      "@type": "xsd:string"
+    },
+    "resourceStatus": {
+      "@id": "mendix:resourceStatus",
+      "@type": "xsd:string"
+    },
+    "runtimeVersion": {
+      "@id": "mendix:runtimeVersion",
+      "@type": "xsd:string"
+    },
+    "lastStartTime": {
+      "@id": "mendix:lastStartTime",
+      "@type": "xsd:string"
+    },
+    "buildExplanation": {
+      "@id": "mendix:buildExplanation",
+      "@type": "xsd:string"
+    },
+    "storageExplanation": {
+      "@id": "mendix:storageExplanation",
+      "@type": "xsd:string"
+    },
+    "runtimeExplanation": {
+      "@id": "mendix:runtimeExplanation",
+      "@type": "xsd:string"
+    },
+    "Packages": {
+      "@id": "mendix:Packages"
+    },
+    "Dashboard": "mendix:Dashboard",
+    "appId": {
+      "@id": "mendix:appId",
+      "@type": "xsd:string"
+    },
+    "deployedBy": {
+      "@id": "mendix:deployedBy",
+      "@type": "xsd:string"
+    },
+    "uptime": {
+      "@id": "mendix:uptime",
+      "@type": "xsd:string"
+    },
+    "uptimeChanged": {
+      "@id": "mendix:uptimeChanged",
+      "@type": "xsd:string"
+    },
+    "createdDate": {
+      "@id": "mendix:createdDate",
+      "@type": "xsd:string"
+    },
+    "error": "mendix:error",
+    "title": {
+      "@id": "mendix:title",
+      "@type": "xsd:string"
+    },
+    "detail": {
+      "@id": "mendix:detail",
+      "@type": "xsd:string"
+    },
+    "invalid-params": {
+      "@id": "mendix:invalid-params",
+      "@container": "@list"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Mendix API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Mendix's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-03) from openapi/mendix-apps-api-openapi.yml, openapi/mendix-environments-api-openapi.yml, openapi/mendix-logs-api-openapi.yml.",
+  "dcterms:created": "2026-10-03",
+  "dcterms:source": [
+    "openapi/mendix-apps-api-openapi.yml",
+    "openapi/mendix-environments-api-openapi.yml",
+    "openapi/mendix-logs-api-openapi.yml",
+    "openapi/mendix-packages-api-openapi.yml",
+    "openapi/mendix-tags-api-openapi.yml"
+  ]
+}

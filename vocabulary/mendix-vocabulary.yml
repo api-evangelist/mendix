@@ -1,0 +1,55 @@
+generated: '2026-10-03'
+method: derived
+generator: derive-vocabulary.py
+source:
+- openapi/mendix-apps-api-openapi.yml
+- openapi/mendix-environments-api-openapi.yml
+- openapi/mendix-logs-api-openapi.yml
+- openapi/mendix-packages-api-openapi.yml
+- openapi/mendix-tags-api-openapi.yml
+vocabulary:
+  name: Mendix Domain Vocabulary
+  description: 'Terms declared by Mendix''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-03'
+  terms:
+  - term: apps
+    definition: For creating, managing app environment resources and deploy app package
+    tags:
+    - Resource Group
+    source: openapi/openapi-deploy-v1.yaml
+  - term: EnvironmentCreateRequest
+    definition: Request to create a new environment.
+    tags:
+    - Object
+    source: openapi/openapi-deploy-v1.yaml#/components/schemas/EnvironmentCreateRequest
+  - term: ConfigurationPatchRequest
+    definition: Request to change environment configurations and settings
+    tags:
+    - Object
+    source: openapi/openapi-deploy-v1.yaml#/components/schemas/ConfigurationPatchRequest
+  - term: ConfigurationDeleteRequest
+    definition: Request to delete environment configurations and settings
+    tags:
+    - Object
+    source: openapi/openapi-deploy-v1.yaml#/components/schemas/ConfigurationDeleteRequest
+  - term: AsyncOperationResponse
+    definition: Response for async operations include create environment, deploy, apply config, start, stop and restart app.
+    tags:
+    - Object
+    source: openapi/openapi-deploy-v1.yaml#/components/schemas/AsyncOperationResponse
+  - term: Environment
+    definition: Environment detail configurations and information.
+    tags:
+    - Object
+    source: openapi/openapi-deploy-v1.yaml#/components/schemas/Environment
+  - term: Dashboard
+    definition: App environment dashboard information.
+    tags:
+    - Object
+    source: openapi/openapi-deploy-v1.yaml#/components/schemas/Dashboard
+  - term: error
+    definition: Error response
+    tags:
+    - Object
+    source: openapi/openapi-deploy-v1.yaml#/components/schemas/error

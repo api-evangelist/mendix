@@ -1,15 +1,14 @@
 aid: mendix
+
 name: Mendix
-description: >-
-  Mendix, a Siemens company, is an enterprise low-code application development
-  platform for designing, building, deploying, and operating multi-experience
-  applications across web, mobile, and conversational interfaces. The platform
-  spans Studio Pro modeling, the Mendix Cloud and private cloud runtimes, and
-  governance and operational tooling for the full application lifecycle.
-  Mendix exposes a suite of platform APIs (Deploy, Build, App Repository,
-  User Management, Content, Studio Pro, and Apps APIs) secured by API keys
-  or personal access tokens (PATs).
+
+description: Mendix, a Siemens company, is an enterprise low-code application development platform for designing, building, deploying, and operating
+  multi-experience applications across web, mobile, and conversational interfaces. The platform spans Studio Pro modeling, the Mendix Cloud and
+  private cloud runtimes, and governance and operational tooling for the full application lifecycle. Mendix exposes a suite of platform APIs (Deploy,
+  Build, App Repository, User Management, Content, Studio Pro, and Apps APIs) secured by API keys or personal access tokens (PATs).
+
 type: Index
+
 deliveryModel:
   model: saas
   open_source: false
@@ -22,6 +21,7 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -35,37 +35,112 @@ accessModel:
   - security
   generated: '2026-09-03'
   method: derived
+
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mendix.png
+
 tags:
-  - Low-Code
-  - Application Development
-  - Enterprise Platform
-  - Application Lifecycle
-  - Deployment
-  - Governance
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/mendix/refs/heads/main/apis.yml
+- Low-Code
+- Application Development
+- Enterprise Platform
+- Application Lifecycle
+- Deployment
+- Governance
+
+url: https://raw.githubusercontent.com/api-evangelist/mendix/refs/heads/main/apis.yml
+
 created: '2026-05-11'
+
 modified: '2026-05-11'
+
 specificationVersion: '0.23'
+
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+
+common:
+- type: SecurityTxt
+  url: well-known/mendix-status-security.txt
+- type: Plans
+  url: plans/mendix-plans-pricing.yml
+- type: Spectral
+  url: rules/mendix-rules.yml
+- type: JSONLD
+  url: json-ld/mendix-context.jsonld
+- type: Vocabulary
+  url: vocabulary/mendix-vocabulary.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DataModel
+  url: data-model/mendix-data-model.yml
+- type: Security
+  url: https://www.mendix.com/trust/
+- type: ErrorCatalog
+  url: errors/mendix-problem-types.yml
+- type: Conformance
+  url: conformance/mendix-conformance.yml
+- type: Overlay
+  url: overlays/mendix-apps-api-overlay.yml
+- type: LLMsTxt
+  url: llms/mendix-llms.txt
+- type: SecurityTxt
+  url: well-known/mendix-security.txt
+- type: SecurityTxt
+  url: well-known/mendix-mendix-security.txt
+- type: WellKnown
+  url: well-known/mendix-well-known.yml
+- type: Hosts
+  url: hosts/mendix-hosts.yml
+- type: Vendors
+  url: vendors/mendix-vendors.yml
+- type: SDKs
+  url: packages/mendix-packages.yml
+- type: Packages
+  url: packages/mendix-packages.yml
+- type: TrustCenter
+  url: https://www.mendix.com/trust/
+- type: TermsOfService
+  url: https://www.mendix.com/legal/terms-of-use/
+- type: Support
+  url: https://support.mendix.com/
+- type: StatusPage
+  url: https://status.mendix.com/
+- type: SignUp
+  url: https://signup.mendix.com/link/signup
+- type: PrivacyPolicy
+  url: https://www.mendix.com/privacy-policy/
+- type: Newsroom
+  url: https://www.mendix.com/press/
+- type: ChangeLog
+  url: https://www.mendix.com/releases/
+- type: APIReference
+  url: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api
+- type: AgenticAccess
+  url: agentic-access/mendix-agentic-access.yml
+- type: VulnerabilityDisclosure
+  url: security/mendix-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/mendix-domain-security.yml
+- type: Authentication
+  url: authentication/mendix-authentication.yml
+- type: GitHubOrganization
+  url: https://github.com/mendix
+- type: LinkedIn
+  url: https://www.linkedin.com/company/mendix
+- type: Website
+  url: https://www.mendix.com
+- type: Documentation
+  url: https://docs.mendix.com/apidocs-mxsdk/apidocs/
+- type: Pricing
+  url: https://www.mendix.com/pricing/
+- type: Signup
+  url: https://signup.mendix.com/
+- type: LlmsText
+  url: https://mendix.com/llms.txt
+- url: https://www.mendix.com/feed/
+  type: Blog
+
 apis:
-- aid: mendix:deploy-api
-  name: Mendix Deploy API
-  description: >-
-    REST API for managing apps, environments, deployment packages, transports, backups, and deployment
-    lifecycle on Mendix Cloud. Authentication is via Mendix-Username and Mendix-ApiKey request headers
-    tied to the requesting user's API key and platform permissions.
-  humanURL: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/
-  baseURL: https://deploy.mendix.com/api/1
-  tags:
-  - Low-Code
-  - Deployment
-  - Application Lifecycle
-  properties:
-  - type: Documentation
-    url: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/
-  - type: Deploy API v2
-    url: https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api-2/
 - aid: mendix:build-api
   name: Mendix Build API
   description: >-
@@ -152,31 +227,9 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/mendix-tags-api-openapi.yml
-common:
-  - type: AgenticAccess
-    url: agentic-access/mendix-agentic-access.yml
-  - type: VulnerabilityDisclosure
-    url: security/mendix-vulnerability-disclosure.yml
-  - type: DomainSecurity
-    url: security/mendix-domain-security.yml
-  - type: Authentication
-    url: authentication/mendix-authentication.yml
-  - type: GitHubOrganization
-    url: https://github.com/mendix
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/mendix
-  - type: Website
-    url: https://www.mendix.com
-  - type: Documentation
-    url: https://docs.mendix.com/apidocs-mxsdk/apidocs/
-  - type: Pricing
-    url: https://www.mendix.com/pricing/
-  - type: Signup
-    url: https://signup.mendix.com/
-  - type: LlmsText
-    url: https://mendix.com/llms.txt
-  - url: https://www.mendix.com/feed/
-    type: Blog
-maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-10-03'
+  status: enriched
+  artifacts_added: 30
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

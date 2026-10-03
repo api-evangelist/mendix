@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/mendix/main/json-schema/mendix-configuration-delete-request-schema.json",
+  "title": "ConfigurationDeleteRequest",
+  "description": "Request to delete environment configurations and settings",
+  "x-generated": "2026-10-03",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/openapi-deploy-v1.yaml#/components/schemas/ConfigurationDeleteRequest",
+  "type": "object",
+  "properties": {
+    "CustomEnvironmentVariables": {
+      "description": "Variables of the app deployed in the environment",
+      "type": "array",
+      "items": {
+        "title": "CustomEnvironmentVariable",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "CustomRuntimeSettings": {
+      "description": "Runtime settings of the app deployed in the environment",
+      "type": "array",
+      "items": {
+        "title": "CustomRuntimeSetting",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "CustomHttpHeaders": {
+      "description": "HTTP headers of the environment network",
+      "type": "array",
+      "items": {
+        "title": "CustomHttpHeaders",
+        "type": "object",
+        "properties": {
+          "header": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "LogLevels": {
+      "description": "Log levels of the environment",
+      "type": "array",
+      "items": {
+        "title": "LogLevels",
+        "type": "object",
+        "properties": {
+          "node": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "ClientCertificates": {
+      "description": "Client certificates of the environment network",
+      "type": "array",
+      "items": {
+        "title": "ClientCertificates",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}

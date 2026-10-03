@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/mendix/main/json-schema/mendix-environment-create-request-schema.json",
+  "title": "EnvironmentCreateRequest",
+  "description": "Request to create a new environment.",
+  "x-generated": "2026-10-03",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/openapi-deploy-v1.yaml#/components/schemas/EnvironmentCreateRequest",
+  "type": "object",
+  "properties": {
+    "displayName": {
+      "type": "string",
+      "description": "Display name of the environment"
+    },
+    "clusterName": {
+      "type": "string",
+      "description": "Cluster name where the environment will be deployed"
+    },
+    "namespace": {
+      "type": "string",
+      "description": "Namespace for the environment"
+    },
+    "storagePlanName": {
+      "type": "string",
+      "description": "Name of the storage plan for the environment"
+    },
+    "databasePlanName": {
+      "type": "string",
+      "description": "Name of the database plan for the environment"
+    },
+    "deploymentPackageName": {
+      "type": "string",
+      "description": "Name of the package for the deployment"
+    },
+    "deploymentPurpose": {
+      "enum": [
+        "Development",
+        "Test",
+        "Acceptance",
+        "Production"
+      ],
+      "type": "string",
+      "description": "Purpose for the deployment"
+    },
+    "isExternalSecretStoreEnabled": {
+      "enum": [
+        "Yes",
+        "No"
+      ],
+      "type": "string",
+      "description": "Indicate if External Secret Store is enabled for environment configuration, applicable only for Standalone mode cluster."
+    },
+    "coreResourcePlan": {
+      "type": "string",
+      "description": "Core Resource Plan for environment creation, it's only for connected mode."
+    },
+    "coreResourceSize": {
+      "enum": [
+        "Small",
+        "Medium",
+        "Large"
+      ],
+      "type": "string",
+      "description": "Core Resource Size for environment, not support Custom Size for environment creation. If need, please use PATCH API to config Custom Size after environment created.",
+      "default": "Small"
+    }
+  },
+  "required": [
+    "displayName",
+    "clusterName",
+    "namespace",
+    "storagePlanName",
+    "databasePlanName",
+    "deploymentPackageName",
+    "deploymentPurpose"
+  ]
+}

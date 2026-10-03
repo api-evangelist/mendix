@@ -1,0 +1,34 @@
+generated: '2026-10-03'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.mendix.com/pricing/
+sources:
+- https://www.mendix.com/pricing/
+name: Mendix pricing
+audience: business-product
+pricing_basis: per-seat
+plans:
+- name: Free
+  price_text: $0 /month
+  price: 0
+  description: Free tier
+- name: Standard One App
+  price_text: $1,090 /month
+  price: 1090
+  description: Standard tier for One App
+- name: Standard Unlimited Apps
+  price_text: $2,725 /month
+  price: 2725
+  description: Standard tier for Unlimited Apps
+- name: Premium
+  price_text: Contact Us
+  description: Premium tier (quote required)
+  features:
+  - Private Marketplace
+  - Mendix Cloud Dedicated
+  - Mendix on Azure
+  - Mendix on Kubernetes
+  - Mendix on SAP BTP
+  - Mendix on StackIT
+  - Mendix on Server
+docs: https://www.mendix.com/pricing/

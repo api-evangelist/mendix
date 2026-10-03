@@ -1,0 +1,16 @@
+generated: '2026-10-03'
+method: probed
+generator: harvest-packages.py
+source: registry metadata endpoints (registry.npmjs.org, pypi.org, rubygems.org, api.nuget.org, packagist.org, crates.io)
+ownership_rule: 'official: true only when the registry metadata (homepage, repository, author, URLs) names the provider''s domain (agentic-access/mendix-agentic-access.yml,
+  authentication/mendix-authentication.yml, linkedin.com, mendix.com, security/mendix-domain-security.yml, security/mendix-vulnerability-disclosure.yml)
+  or its accepted GitHub org.'
+packages:
+- name: mendix
+  registry: npm
+  url: https://www.npmjs.com/package/mendix
+  language: JavaScript
+  official: true
+  version: 11.15.0
+  published: '2026-09-30'
+  evidence: metadata names mendix.com

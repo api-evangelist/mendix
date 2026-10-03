@@ -1,0 +1,38 @@
+generated: '2026-10-03'
+method: generated
+generator: extract-docs-artifacts.py skills (local)
+source: openapi/openapi-deploy-v1.yaml
+skills:
+- file: skills/mendix-deploy-to-environment.md
+  name: mendix-deploy-to-environment
+  api: openapi/openapi-deploy-v1.yaml
+  operations:
+  - createEnvironment
+  - requestActionOnAppInEnv
+  - getEnvironment
+- file: skills/mendix-start-environment.md
+  name: mendix-start-environment
+  api: openapi/mendix-environments-api-openapi.yml
+  operations:
+  - postAppsByAppIdEnvironmentsByModeStart
+  - getAppsByAppIdEnvironmentsByModeStartByJobId
+- file: skills/mendix-deploy-package.md
+  name: mendix-deploy-package
+  api: openapi/mendix-packages-api-openapi.yml
+  operations:
+  - postAppsByAppIdPackagesUpload
+  - postAppsByAppIdEnvironmentsByModeTransport
+  - getAppsByAppIdEnvironmentsByModePackage
+- file: skills/mendix-manage-tags.md
+  name: mendix-manage-tags
+  api: openapi/mendix-tags-api-openapi.yml
+  operations:
+  - getAppsByAppIdEnvironmentsByModeTags
+  - postAppsByAppIdEnvironmentsByModeTags
+  - deleteAppsByAppIdEnvironmentsByModeTags
+- file: skills/mendix-create-and-retrieve-app.md
+  name: mendix-create-and-retrieve-app
+  api: openapi/mendix-apps-api-openapi.yml
+  operations:
+  - postApps
+  - getAppsByAppId

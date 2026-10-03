@@ -1,0 +1,330 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/mendix/main/json-schema/mendix-configuration-patch-request-schema.json",
+  "title": "ConfigurationPatchRequest",
+  "description": "Request to change environment configurations and settings",
+  "x-generated": "2026-10-03",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/openapi-deploy-v1.yaml#/components/schemas/ConfigurationPatchRequest",
+  "type": "object",
+  "properties": {
+    "displayName": {
+      "type": "string",
+      "description": "Display name of the environment"
+    },
+    "dtapMode": {
+      "type": "string",
+      "description": "DTAP mode of the environment can be Development or Production"
+    },
+    "replicas": {
+      "type": "integer",
+      "description": "Replicas of the environment"
+    },
+    "appUrl": {
+      "type": "string",
+      "description": "URL of the app deployed in the environment"
+    },
+    "clientIdForSecretStore": {
+      "type": "string",
+      "description": "Client ID for access external secret store"
+    },
+    "adminPassword": {
+      "type": "string",
+      "description": "Admin password of the app deployed in the environment"
+    },
+    "isAdminPasswordSecretStore": {
+      "enum": [
+        "Yes",
+        "No"
+      ],
+      "type": "string",
+      "description": "Indicate if Admin Password is stored as external secret, applicable only for Standalone mode cluster."
+    },
+    "leaderlessMode": {
+      "enum": [
+        "Yes",
+        "No"
+      ],
+      "type": "string",
+      "description": "Indicate if the environment is in leaderless mode"
+    },
+    "Constants": {
+      "description": "Constants of the app deployed in the environment",
+      "type": "array",
+      "items": {
+        "title": "Constants",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "newValue": {
+            "type": "string"
+          },
+          "isSecretStore": {
+            "enum": [
+              "Yes",
+              "No"
+            ],
+            "type": "string",
+            "description": "Indicate if Constant is stored as external secret, applicable only for Standalone mode cluster."
+          },
+          "visibility": {
+            "enum": [
+              "Visible",
+              "Masked",
+              "MaskedHidden"
+            ],
+            "type": "string",
+            "description": "Indicate if Constant is visible or hidden, applicable only for Standalone mode cluster."
+          }
+        }
+      }
+    },
+    "ScheduledEvents": {
+      "description": "Scheduled events of the app deployed in the environment",
+      "type": "array",
+      "items": {
+        "title": "ScheduledEvents",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "newEnabled": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "CustomEnvironmentVariables": {
+      "description": "Variables of the app deployed in the environment",
+      "type": "array",
+      "items": {
+        "title": "CustomEnvironmentVariable",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "newValue": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "CustomRuntimeSettings": {
+      "description": "Runtime settings of the app deployed in the environment",
+      "type": "array",
+      "items": {
+        "title": "CustomRuntimeSetting",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "newValue": {
+            "type": "string"
+          },
+          "isSecretStore": {
+            "enum": [
+              "Yes",
+              "No"
+            ],
+            "type": "string",
+            "description": "Indicate if Custom Runtime Settings is stored as external secret, applicable only for Standalone mode cluster."
+          }
+        }
+      }
+    },
+    "CustomHttpHeaders": {
+      "description": "HTTP headers of the environment network",
+      "type": "array",
+      "items": {
+        "title": "CustomHttpHeaders",
+        "type": "object",
+        "properties": {
+          "header": {
+            "type": "string"
+          },
+          "newValue": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "CustomJVMOptions": {
+      "description": "JVM options of the environment model",
+      "title": "CustomJVMOptions",
+      "type": "object",
+      "properties": {
+        "newValue": {
+          "type": "string"
+        }
+      }
+    },
+    "CustomJettyOptions": {
+      "description": "Jetty options of the environment model",
+      "title": "CustomJettyOptions",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "newValue": {
+          "type": "string"
+        }
+      }
+    },
+    "Debugger": {
+      "description": "Debugger of the app deployed in the environment",
+      "title": "Debugger",
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "string",
+          "enum": [
+            "Yes",
+            "No"
+          ],
+          "description": "Indicate if Debugger is enabled for the environment"
+        },
+        "password": {
+          "type": "string",
+          "description": "Password for accessing the debugger"
+        },
+        "isSecretStore": {
+          "enum": [
+            "Yes",
+            "No"
+          ],
+          "type": "string",
+          "description": "Indicate if Debugger password is stored as external secret, applicable only for Standalone mode cluster."
+        }
+      }
+    },
+    "LogLevels": {
+      "description": "Log levels of the environment",
+      "type": "array",
+      "items": {
+        "title": "LogLevels",
+        "type": "object",
+        "properties": {
+          "node": {
+            "type": "string"
+          },
+          "level": {
+            "enum": [
+              "CRITICAL",
+              "ERROR",
+              "WARNING",
+              "INFO",
+              "DEBUG",
+              "TRACE"
+            ],
+            "type": "string"
+          }
+        }
+      }
+    },
+    "ClientCertificates": {
+      "description": "Client certificates of the environment network",
+      "type": "array",
+      "items": {
+        "title": "ClientCertificates",
+        "type": "object",
+        "properties": {
+          "base64pfxCertFileContent": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "newEnabled": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "CustomTLSConfig": {
+      "description": "TLS configuration of the environment network",
+      "title": "CustomTLSConfig",
+      "type": "object",
+      "properties": {
+        "enableTLS": {
+          "type": "boolean",
+          "default": false
+        },
+        "tlsConfig": {
+          "enum": [
+            "TlsDefault",
+            "TlsCustom"
+          ],
+          "type": "string"
+        },
+        "secretName": {
+          "type": "string"
+        },
+        "tlsCertificate": {
+          "type": "string"
+        },
+        "tlsPrivateKey": {
+          "type": "string"
+        },
+        "useExistingSecret": {
+          "enum": [
+            "UseExistedSecret",
+            "AddNewKeyCertificate"
+          ],
+          "type": "string"
+        }
+      }
+    },
+    "CoreResource": {
+      "description": "Core resource of the environment",
+      "title": "CoreResource",
+      "type": "object",
+      "properties": {
+        "coreResourcePlan": {
+          "type": "string",
+          "description": "Core Resource Plan for environment, it's only for Connected mode."
+        },
+        "coreResourceSize": {
+          "enum": [
+            "Small",
+            "Medium",
+            "Large",
+            "Custom"
+          ],
+          "type": "string",
+          "description": "Core Resource Size for environment, it's for both Connected and Standalone modes."
+        },
+        "cpuRequest": {
+          "type": "number",
+          "description": "Cpu cores request should not be lower than 0.1 CPU"
+        },
+        "cpuLimit": {
+          "type": "number",
+          "description": "Cpu cores limit should not be lower than 0.1 CPU"
+        },
+        "memRequest": {
+          "type": "number",
+          "description": "Memory request should not be lower than 0.512 GB"
+        },
+        "memLimit": {
+          "type": "number",
+          "description": "Memory limit should not be lower than 0.512 GB"
+        },
+        "ephemeralRequest": {
+          "type": "number",
+          "description": "Ephemeral Storage request should not be lower than 1 GB"
+        },
+        "ephemeralLimit": {
+          "type": "number",
+          "description": "Ephemeral storage limit should not be lower than 1 GB"
+        }
+      }
+    }
+  }
+}

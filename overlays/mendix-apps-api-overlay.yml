@@ -1,0 +1,9 @@
+{
+  "generated": "2026-10-03",
+  "method": "generated",
+  "source": "openapi/mendix-apps-api-openapi.yml",
+  "overlay": {
+    "extends": "openapi/mendix-apps-api-openapi.yml",
+    "actions": []
+  }
+}

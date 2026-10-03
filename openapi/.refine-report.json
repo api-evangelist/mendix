@@ -1,7 +1,8 @@
 {
   "provider": "mendix",
   "sources": [
-    "_original/mendix-openapi.yml"
+    "_original/mendix-openapi.yml",
+    "openapi-deploy-v1.yaml"
   ],
   "outputs": [
     "mendix-apps-api-openapi.yml",
@@ -10,13 +11,17 @@
     "mendix-packages-api-openapi.yml",
     "mendix-tags-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "archived openapi/openapi-deploy-v1.yaml"
+  ],
   "errors": [],
   "warnings": [],
   "notes": [
     "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "mendix-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: already-registered"
+    "openapi-deploy-v1.yaml: upgraded openapi 3.0.1 -> OpenAPI 3.2.0",
+    "tag 'Apps' spans 2 source specs (mendix-openapi.yml, openapi-deploy-v1.yaml): per-path servers applied",
+    "apis.yml register: written (+0 apis, 7 total)"
   ],
   "skipped": [
     "mendix-apps-api-openapi.yml: previously refined output, superseded by openapi/_original/",

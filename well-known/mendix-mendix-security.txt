@@ -1,0 +1,13 @@
+Contact: mailto:productcert@siemens.com
+Contact: mailto:cert@siemens.com
+Contact: mailto:security@mendix.com
+Encryption: https://cert-portal.siemens.com/productcert/pgp/productcert-siemens-com.asc
+Encryption: https://cert-portal.siemens.com/cert/pgp/cert-siemens-com.asc
+Acknowledgments: https://www.siemens.com/global/en/products/services/cert/hall-of-thanks.html
+Preferred-Languages: en, de
+Canonical: https://www.mendix.com/.well-known/security.txt
+Policy: https://www.siemens.com/global/en/products/services/cert/vulnerability-process.html
+Policy: https://www.mendix.com/trust/
+Hiring: https://www.mendix.com/careers/
+CSAF: https://cert-portal.siemens.com/productcert/csaf/provider-metadata.json
+Expires: 2029-12-31T23:00:00.000Z

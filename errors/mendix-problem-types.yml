@@ -1,0 +1,46 @@
+generated: '2026-10-03'
+method: derived
+generator: derive-problem-types.py
+source:
+- openapi/mendix-apps-api-openapi.yml
+- openapi/mendix-environments-api-openapi.yml
+- openapi/mendix-logs-api-openapi.yml
+- openapi/mendix-packages-api-openapi.yml
+- openapi/mendix-tags-api-openapi.yml
+- openapi/openapi-deploy-v1.yaml
+format: custom
+envelope:
+  media_type: application/json
+  schema: error
+coverage:
+  operations: 29
+  statuses_declared: 4
+problems:
+- status: 400
+  title: Bad Request
+  description: Invalid input parameter or request body
+  operations: 8
+  media_types:
+  - application/json
+  schema: error
+- status: 401
+  title: Unauthorized
+  description: Authentication information is missing or invalid
+  operations: 9
+  media_types:
+  - application/json
+  schema: error
+- status: 403
+  title: Forbidden
+  description: User has no permission for this operation
+  operations: 9
+  media_types:
+  - application/json
+  schema: error
+- status: 404
+  title: Not Found
+  description: Resource not found
+  operations: 9
+  media_types:
+  - application/json
+  schema: error
