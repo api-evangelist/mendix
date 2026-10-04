@@ -2,10 +2,10 @@ aid: mendix
 
 name: Mendix
 
-description: Mendix, a Siemens company, is an enterprise low-code application development platform for designing, building, deploying, and operating
-  multi-experience applications across web, mobile, and conversational interfaces. The platform spans Studio Pro modeling, the Mendix Cloud and
-  private cloud runtimes, and governance and operational tooling for the full application lifecycle. Mendix exposes a suite of platform APIs (Deploy,
-  Build, App Repository, User Management, Content, Studio Pro, and Apps APIs) secured by API keys or personal access tokens (PATs).
+description: Mendix, a Siemens company, is an enterprise low-code application development platform for designing, building, deploying, and operating multi-experience
+  applications across web, mobile, and conversational interfaces. The platform spans Studio Pro modeling, the Mendix Cloud and private cloud runtimes,
+  and governance and operational tooling for the full application lifecycle. Mendix exposes a suite of platform APIs (Deploy, Build, App Repository, User
+  Management, Content, Studio Pro, and Apps APIs) secured by API keys or personal access tokens (PATs).
 
 type: Index
 
@@ -139,13 +139,14 @@ common:
   url: https://mendix.com/llms.txt
 - url: https://www.mendix.com/feed/
   type: Blog
+- type: CapabilityMap
+  url: capabilities/mendix-capability-edges.yml
+  name: Mendix Business Capability Map
 
 apis:
 - aid: mendix:build-api
   name: Mendix Build API
-  description: >-
-    REST API for managing app projects, branches, revisions, and build packages in Mendix Team Server.
-    Uses Mendix API key authentication.
+  description: REST API for managing app projects, branches, revisions, and build packages in Mendix Team Server. Uses Mendix API key authentication.
   humanURL: https://docs.mendix.com/apidocs-mxsdk/apidocs/build-api/
   baseURL: https://deploy.mendix.com/api/1
   tags:
@@ -161,9 +162,7 @@ apis:
     url: https://docs.mendix.com/apidocs-mxsdk/apidocs/build-api/
 - aid: mendix:app-repository-api
   name: Mendix App Repository API
-  description: >-
-    REST API for managing apps, members, and repository metadata in the Mendix platform. Uses PAT or Mendix
-    API key authentication.
+  description: REST API for managing apps, members, and repository metadata in the Mendix platform. Uses PAT or Mendix API key authentication.
   humanURL: https://docs.mendix.com/apidocs-mxsdk/apidocs/app-repository-api/
   baseURL: https://repository.api.mendix.com
   tags:
@@ -227,6 +226,7 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/mendix-tags-api-openapi.yml
+
 x-enrichment:
   date: '2026-10-03'
   status: enriched

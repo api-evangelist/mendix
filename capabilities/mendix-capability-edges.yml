@@ -1,0 +1,38 @@
+slug: mendix
+provider: Mendix
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: Environments
+  spec_file: mendix-environments-api-openapi.yml
+  capability_id: BC-4210.20
+  capability_id_l1: BC-4210
+  capability_name: Environment Management
+  confidence: 0.7
+  evidence: POST /apps/{AppId}/environments/{Mode}/start 'Start environment', '/clean' 'Clean environment
+    data', '/settings' 'Update environment settings', '/scale' 'Scale memory and instances'
+  reason: 'Operations provision, start/stop, clean, configure and scale deployment environments (by Mode:
+    test/acceptance/production) for an app — environment stewardship within the release and deployment
+    pipeline. Some overlap with capacity management (scale) and IT infrastructure, hence 0.7 rather than
+    higher.'
+- tag: Packages
+  spec_file: mendix-packages-api-openapi.yml
+  capability_id: BC-4210.40
+  capability_id_l1: BC-4210
+  capability_name: Deployment Orchestration
+  confidence: 0.7
+  evidence: POST /apps/{AppId}/packages/upload 'Upload deployment package'; POST .../transport 'Transport
+    package to environment'; GET .../package 'Get deployed package'
+  reason: Deployment artefact upload and promotion ('transport') of a package into a target environment
+    — i.e. orchestrating delivery of a build into running environments. Could also be read as release
+    engineering (artefact/versioning), so sub-capability choice carries some ambiguity.
