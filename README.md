@@ -1,4 +1,4 @@
-# Mendix (mendix)
+# Mendix
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,97 +66,153 @@
 
 Mendix, a Siemens company, is an enterprise low-code application development platform for designing, building, deploying, and operating multi-experience applications across web, mobile, and conversational interfaces. The platform spans Studio Pro modeling, the Mendix Cloud and private cloud runtimes, and governance and operational tooling for the full application lifecycle. Mendix exposes a suite of platform APIs (Deploy, Build, App Repository, User Management, Content, Studio Pro, and Apps APIs) secured by API keys or personal access tokens (PATs).
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/mendix/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/mendix/refs/heads/main/apis.yml)
+**Areas:** Low-Code · Application Development · Enterprise Platform · Application Lifecycle · Deployment · Governance
 
-## Scope
+## Mendix on APIs.io
 
-- **Type:** Index
+Everything profiled for Mendix is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/mendix/](https://apis.io/providers/mendix/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (7)
 
-- Low-Code
-- Application Development
-- Enterprise Platform
-- Application Lifecycle
-- Deployment
-- Governance
+- [Mendix Build API](https://apis.io/apis/mendix/build-api/) — REST API for managing app projects, branches, revisions, and build packages in Mendix Team Server. Uses Mendix API key authentication.
+- [Mendix App Repository API](https://apis.io/apis/mendix/app-repository-api/) — REST API for managing apps, members, and repository metadata in the Mendix platform. Uses PAT or Mendix API key authentication.
+- [Mendix Apps API](https://apis.io/apis/mendix/mendix-apps-api/) — The Apps API from Mendix — 2 operation(s) for apps.
+- [Mendix Environments API](https://apis.io/apis/mendix/mendix-environments-api/) — The Environments API from Mendix — 8 operation(s) for environments.
+- [Mendix Logs API](https://apis.io/apis/mendix/mendix-logs-api/) — The Logs API from Mendix — 2 operation(s) for logs.
+- [Mendix Packages API](https://apis.io/apis/mendix/mendix-packages-api/) — The Packages API from Mendix — 3 operation(s) for packages.
+- [Mendix Tags API](https://apis.io/apis/mendix/mendix-tags-api/) — The Tags API from Mendix — 1 operation(s) for tags.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Mendix Deploy API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-REST API for managing apps, environments, deployment packages, transports, backups, and deployment lifecycle on Mendix Cloud. Authentication is via Mendix-Username and Mendix-ApiKey request headers tied to the requesting user's API key and platform permissions.
+- [Mendix Agentic Access](https://apis.io/agentic-access/mendix/mendix-agentic-access/)
 
-- **Human URL:** [https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/)
-- **Base URL:** `https://deploy.mendix.com/api/1`
+#### JSON Schema (3)
 
-#### Tags
+The data models the API reads and writes.
 
-- Low-Code
-- Deployment
-- Application Lifecycle
+- [ConfigurationDeleteRequest](https://apis.io/schemas/mendix/mendix-configuration-delete-request/)
+- [ConfigurationPatchRequest](https://apis.io/schemas/mendix/mendix-configuration-patch-request/)
+- [EnvironmentCreateRequest](https://apis.io/schemas/mendix/mendix-environment-create-request/)
 
-#### Properties
+#### JSON-LD (1)
 
-- [Documentation](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/)
-- [Deploy  A P I v2](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api-2/)
-- [Postman Collection](collections/mendix.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/mendix.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Linked-data contexts for the provider's vocabulary.
 
-### Mendix Build API
+- [Mendix Context](https://apis.io/jsonld/mendix/mendix-context/)
 
-REST API for managing app projects, branches, revisions, and build packages in Mendix Team Server. Uses Mendix API key authentication.
+#### Collections (6)
 
-- **Human URL:** [https://docs.mendix.com/apidocs-mxsdk/apidocs/build-api/](https://docs.mendix.com/apidocs-mxsdk/apidocs/build-api/)
-- **Base URL:** `https://deploy.mendix.com/api/1`
+Postman and Open Collection request collections.
 
-#### Tags
+- [Mendix Deploy API v1](https://apis.io/collections/mendix/open-mendix/)
+- [Mendix Deploy API v1 Apps API](https://apis.io/collections/mendix/open-mendix-apps-api/)
+- [Mendix Deploy API v1 Apps Environments API](https://apis.io/collections/mendix/open-mendix-environments-api/)
+- [Mendix Deploy API v1 Apps Logs API](https://apis.io/collections/mendix/open-mendix-logs-api/)
+- [Mendix Deploy API v1 Apps Packages API](https://apis.io/collections/mendix/open-mendix-packages-api/)
+- [Mendix Deploy API v1 Apps Tags API](https://apis.io/collections/mendix/open-mendix-tags-api/)
 
-- Low-Code
-- Build
-- Source Control
+#### Overlays (1)
 
-#### Properties
+OpenAPI overlays, including conversational phrasing for each operation.
 
-- [Documentation](https://docs.mendix.com/apidocs-mxsdk/apidocs/build-api/)
-- [Postman Collection](collections/mendix.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/mendix.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Mendix Apps Api Overlay](https://apis.io/overlays/mendix/mendix-apps-api-overlay/)
 
-### Mendix App Repository API
+#### Governance rules (1)
 
-REST API for managing apps, members, and repository metadata in the Mendix platform. Uses PAT or Mendix API key authentication.
+Spectral rulesets for the provider's contracts.
 
-- **Human URL:** [https://docs.mendix.com/apidocs-mxsdk/apidocs/app-repository-api/](https://docs.mendix.com/apidocs-mxsdk/apidocs/app-repository-api/)
-- **Base URL:** `https://repository.api.mendix.com`
+- [Mendix API Rules](https://apis.io/rules/mendix/mendix-rules/)
 
-#### Tags
+#### Security (3)
 
-- Low-Code
-- App Management
-- Governance
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Mendix Authentication](https://apis.io/security/mendix/mendix-authentication/)
+- [Mendix Domain Security](https://apis.io/security/mendix/mendix-domain-security/)
+- [Mendix Vulnerability Disclosure](https://apis.io/security/mendix/mendix-vulnerability-disclosure/)
 
-- [Documentation](https://docs.mendix.com/apidocs-mxsdk/apidocs/app-repository-api/)
-- [Postman Collection](collections/mendix.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/mendix.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Plans and pricing (1)
 
-## Common Properties
+Published plans, tiers and prices.
 
-- [GitHub Organization](https://github.com/mendix)
-- [LinkedIn](https://www.linkedin.com/company/mendix)
+- [Mendix Plans Pricing](https://apis.io/plans/mendix/mendix-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.mendix.com)
 - [Documentation](https://docs.mendix.com/apidocs-mxsdk/apidocs/)
+- [API reference](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api)
 - [Pricing](https://www.mendix.com/pricing/)
-- [Sign Up](https://signup.mendix.com/)
-- [L L Ms Txt](https://mendix.com/llms.txt)
+- [Sign up](https://signup.mendix.com/link/signup)
+- [Support](https://support.mendix.com/)
+- [Changelog](https://www.mendix.com/releases/)
+- [Blog](https://www.mendix.com/feed/)
+- [Security](https://www.mendix.com/trust/)
+- [Trust centre](https://www.mendix.com/trust/)
+- [Terms of service](https://www.mendix.com/legal/terms-of-use/)
+- [Privacy policy](https://www.mendix.com/privacy-policy/)
+- [GitHub](https://github.com/mendix)
+- [Status](https://status.mendix.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 57.7** — strong · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 55.9 |
+| Contract governance | 19.7 |
+| Operational transparency | 44.7 |
+| Developer ergonomics | 44.6 |
+| Access clarity | 84.2 |
+
+**Agent readiness 33.5** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | partial |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/mendix/](https://apis.io/providers/mendix/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Mendix: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/mendix/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
